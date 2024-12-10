@@ -1,0 +1,16 @@
+(version 2.4.4)
+
+(build
+ (progn
+  (when
+   %{pkg-self:dev}
+   (run dune subst))
+  (run dune build -p %{pkg-self:name} -j %{jobs} @install)))
+
+(depends dune ocaml astring result camlp-streams)
+
+(source
+ (fetch
+  (url https://github.com/ocaml/odoc/releases/download/2.4.4/odoc-2.4.4.tbz)
+  (checksum
+   sha256=7e253a55b5c8f610f9e0b48940ecdaf21c01553143af93b40c998c30499e51f3)))

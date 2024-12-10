@@ -1,0 +1,6 @@
+(vendored_dirs external)
+
+(env
+ (_
+  (flags
+   (:standard -w -37 -w -81 -w -34 -w -69 -w -30 -open Core))))
